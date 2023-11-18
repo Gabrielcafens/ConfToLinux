@@ -1,86 +1,86 @@
-**Configurações de ambiente no Linux :computer: :linux:**
+**Configurações de ambiente no Linux**
 
 **Pré-requisitos**
 
-:computer: **Linux (Fedora 38)** instalado
-:package: **Gerenciador de pacotes (dnf)** instalado
-:git: **Git** instalado
+* Linux (Fedora 38) instalado
+* Gerenciador de pacotes (dnf) instalado
+* Git instalado
 
 **Passo a passo**
 
-1. **Mover a pasta Templates :computer: :linux: :zsh: :git:**
+1. **Mover a pasta Templates**
 
 ```
-# Mova a pasta Templates para a pasta home :computer: :linux:
+# Mova a pasta Templates para a pasta home
 
 sudo mv ~/Templates/ ~/
 
-# Faça o merge da pasta Templates com a já existente :computer: :linux: :zsh: :git:**
+# Faça o merge da pasta Templates com a já existente
 
 rsync -a ~/Templates/ ~/Templates/
 ```
 
-2. **Instalar o zsh e o OH MY ZSH :computer: :linux: :zsh:**
+2. **Instalar o zsh e o Oh My Zsh**
 
 ```
-# Instale o zsh :computer: :linux:
+# Instale o zsh
 
 sudo dnf install zsh
 
-# Instale o OH MY ZSH :computer: :linux: :zsh:
+# Instale o Oh My Zsh
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-3. **Alterar o tema para agnoster :computer: :zsh:**
+3. **Alterar o tema para agnoster**
 
 ```
-# Abra o arquivo .zshrc :computer: :zsh:
+# Abra o arquivo .zshrc
 
 nano ~/.zshrc
 
-# Adicione a seguinte linha ao final do arquivo :computer: :zsh:
+# Adicione a seguinte linha ao final do arquivo
 
 ZSH_THEME="agnoster"
 ```
 
-4. **Instalar o plugin de autosuggestions :computer: :zsh:**
+4. **Instalar o plugin de autosuggestions**
 
 
-# Abra o terminal :computer: :zsh:
+# Abra o terminal
 
 zsh
 
-# Instale o plugin de autosuggestions usando o Oh My ZSH :computer: :zsh:
+# Instale o plugin de autosuggestions usando o Oh My Zsh
 
-git clone [https://github.com/zsh-users/zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions): [https://github.com/zsh-users/zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone [https://github.com/zsh-users/zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
-# Habilite o plugin :computer: :zsh:
+# Habilite o plugin
 
 nano ~/.zshrc
 
-# Adicione a seguinte linha ao final do arquivo :computer: :zsh:
+# Adicione a seguinte linha ao final do arquivo
 
 plugins=(... zsh-autosuggestions ...)
 
 
-5. **Instalar o GH :computer: :git:**
+5. **Instalar o GH**
 
 ```
-# Instale o GH :computer: :git:
+# Instale o GH
 
 sudo dnf install gh
 ```
 
-6. **Mover o arquivo pacman :computer: :linux: :zsh: :git:**
+6. **Mover o arquivo pacman**
 
 ```
-# Mova o arquivo pacman para a pasta .config :computer: :linux: :zsh: :git:**
+# Mova o arquivo pacman para a pasta .config
 
 sudo mv ~/pacman ~/.config/
 ```
 
-7. **Configurar o tamanho do terminal e o background transparente :computer: :terminal: :110x30: :transparent:**
+7. **Configurar o tamanho do terminal e o background transparente**
 
 **Abra as preferências do terminal:**
 
@@ -88,13 +88,13 @@ sudo mv ~/pacman ~/.config/
 gnome-terminal --preferences
 ```
 
-**Altere o tamanho do terminal para 110x30 :computer: :terminal: :110x30:**
+**Altere o tamanho do terminal para 110x30**
 
 ```
 Tamanho da janela: 110x30
 ```
 
-**Ative o background transparente :computer: :terminal: :transparent:**
+**Ative o background transparente**
 
 ```
 Background transparente: Sim
@@ -102,9 +102,8 @@ Background transparente: Sim
 
 **Salve as alterações.**
 
-**Pronto!:tada:**
+**Pronto!**
 
 **Print do terminal:**
-![image](https://github.com/Gabrielcafens/ConfToLinux/assets/95833512/76287d0a-cab3-4d45-92dc-d8f8414c8394)
 
-
+image: [https://github.com/Gabrielcafens/ConfToLinux/assets/95833512/76287d0a-cab3-4d45-92dc-d8f8414c8394](https://github.com/Gabrielcafens/ConfToLinux/assets/95833512/76287d0a-cab3-4d45-92dc-d8f8414c8394)
