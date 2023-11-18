@@ -47,15 +47,15 @@ ZSH_THEME="agnoster"
 **Passo 4- Instalar autosuggestions rainbow:**
 
 
-# Instale o plugin de autosuggestions usando o Oh My Zsh 
+Instale o plugin de autosuggestions usando o Oh My Zsh 
 
 git clone [https://github.com/zsh-users/zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
-# Habilite o plugin :heavy_check_mark:
+Habilite o plugin :heavy_check_mark:
 
 nano ~/.zshrc
 
-# Adicione a seguinte linha ao final do arquivo :heavy_check_mark:
+Adicione a seguinte linha ao final do arquivo :heavy_check_mark:
 
 plugins=(... zsh-autosuggestions ...)
 
@@ -63,7 +63,7 @@ plugins=(... zsh-autosuggestions ...)
 **Passo 5- Instalar gh :computer: :octopus:**
 
 ```
-# Instale o GH :octopus:
+# Instale o GH 
 
 sudo dnf install gh
 ```
@@ -90,14 +90,7 @@ Tamanho da janela: 110x30
 # Ative o background transparente 
 
 Background transparente: Sim
-```
-
-**Passo 8- Comtemplem o mago :octopus:**
-![image](https://github.com/Gabrielcafens/ConfToLinux/assets/95833512/9de42348-9ee1-4820-889e-f1f9efff67b6)
-
-
-
-                         ___
+```                         ___
                       .-'   `'.
                      /         \
                      |         ;
