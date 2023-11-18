@@ -106,4 +106,5 @@ Background transparente: Sim
 
 **Print do terminal:**
 
-image: [https://github.com/Gabrielcafens/ConfToLinux/assets/95833512/76287d0a-cab3-4d45-92dc-d8f8414c8394](https://github.com/Gabrielcafens/ConfToLinux/assets/95833512/76287d0a-cab3-4d45-92dc-d8f8414c8394)
+image: ![image](https://github.com/Gabrielcafens/ConfToLinux/assets/95833512/91b7585b-7fb5-4df4-825d-40c2c95de84f)
+
