@@ -1,0 +1,2 @@
+# ConfToLinux
+Minhas configurações básicas
