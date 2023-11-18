@@ -8,10 +8,10 @@
 
 **Passo a passo**
 
-1. **Mover a pasta Templates**
+**Passo 1- Mover Templates :house:**
 
 ```
-# Mova a pasta Templates para a pasta home :house:
+# Mover a pasta Templates para a pasta home 
 
 sudo mv ~/Templates/ ~/
 
@@ -20,22 +20,22 @@ sudo mv ~/Templates/ ~/
 rsync -a ~/Templates/ ~/Templates/
 ```
 
-2. **Instalar o zsh e o Oh My Zsh**
+**Passo 2- Instalar Oh My Zsh :rainbow:**
 
 ```
 # Instale o zsh :shell:
 
 sudo dnf install zsh
 
-# Instale o Oh My Zsh :rainbow:
+# Instale o Oh My Zsh
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-3. **Alterar o tema para agnoster**
+**Passo 3- Mudar tema :file_folder:**
 
 ```
-# Abra o arquivo .zshrc :file_folder:
+# Abra o arquivo .zshrc 
 
 nano ~/.zshrc
 
@@ -44,15 +44,10 @@ nano ~/.zshrc
 ZSH_THEME="agnoster"
 ```
 
-4. **Instalar o plugin de autosuggestions**
+**Passo 4- Instalar autosuggestions rainbow:**
 
 
-
-# Abra o terminal :computer:
-
-zsh
-
-# Instale o plugin de autosuggestions usando o Oh My Zsh :rainbow:
+# Instale o plugin de autosuggestions usando o Oh My Zsh 
 
 git clone [https://github.com/zsh-users/zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
@@ -65,8 +60,7 @@ nano ~/.zshrc
 plugins=(... zsh-autosuggestions ...)
 
 
-
-5. **Instalar o GH**
+**Passo 5- Instalar gh :computer: :octopus:**
 
 ```
 # Instale o GH :octopus:
@@ -74,7 +68,7 @@ plugins=(... zsh-autosuggestions ...)
 sudo dnf install gh
 ```
 
-6. **Mover o arquivo pacman**
+**Passo 6- Mover o pacman :ruler:**
 
 ```
 # Mova o arquivo pacman para a pasta .config :folder_open:
@@ -82,30 +76,46 @@ sudo dnf install gh
 sudo mv ~/pacman ~/.config/
 ```
 
-7. **Configurar o tamanho do terminal e o background transparente**
-
-**Abra as preferências do terminal :computer::**
+**Passo 7- Preferências de terminal :eye:**
 
 ```
+# Configure o tamanho do terminal e o background transparente 
+
 gnome-terminal --preferences
-```
 
-**Altere o tamanho do terminal para 110x30 :ruler:
+# Altere o tamanho do terminal para 110x30 
 
-```
 Tamanho da janela: 110x30
-```
 
-**Ative o background transparente :eye:
+# Ative o background transparente 
 
-```
 Background transparente: Sim
 ```
 
-**Salve as alterações.**
+**Passo 8- Comtemplem o mago :octopus:**
+![image](https://github.com/Gabrielcafens/ConfToLinux/assets/95833512/9de42348-9ee1-4820-889e-f1f9efff67b6)
 
-**Pronto! :heavy_check_mark:
 
-**Print do terminal:**
 
-![image](https://github.com/Gabrielcafens/ConfToLinux/assets/95833512/6c8f6cbd-8f29-400d-98da-42cc0ed3a57a)
+                         ___
+                      .-'   `'.
+                     /         \
+                     |         ;
+                     |         |           ___.--,
+            _.._     |0) = (0) |    _.---'`__.-( (_.
+     __.--'`_.. '.__.\    '--. \_.-' ,.--'`     `""`
+    ( ,.--'`   ',__ /./;   ;, '.__.'`    __
+    _`) )  .---.__.' / |   |\   \__..--""  """--.,_
+   `---' .'.''-._.-'`_./  /\ '.  \ _.--''````'''--._`-.__.'
+         | |  .' _.-' |  |  \  \  '.               `----`
+          \ \/ .'     \  \   '. '-._)
+           \/ /        \  \    `=.__`'-.
+           / /\         `) )    / / `"".`\
+     , _.-'.'\ \        / /    ( (     / /
+      `--'`   ) )    .-'.'      '.'.  | (
+             (/`    ( (`          ) )  '-;   
+
+
+
+
+
