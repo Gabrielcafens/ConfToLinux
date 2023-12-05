@@ -2,7 +2,7 @@
 
 **Pré-requisitos**
 
-* **Linux (Fedora 38) instalado** :computer:
+* **Linux (Fedora 39) instalado** :computer:
 * **Gerenciador de pacotes (dnf) instalado** :package:
 * **Git instalado** :octopus:
 
