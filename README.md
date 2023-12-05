@@ -75,6 +75,7 @@ sudo dnf install gh
 
 sudo mv ~/pacman ~/.config/
 ```
+adicionar ~/.config/pacman na ultima linha
 
 **Passo 7- Preferências de terminal :eye:**
 
