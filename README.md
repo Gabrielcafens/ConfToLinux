@@ -80,6 +80,11 @@ adicionar ~/.config/pacman na ultima linha
 **Passo 7- Preferências de terminal :eye:**
 
 ```
+**Passo 7- Preferências de terminal :eye:**
+
+sudo chmod +x ~/.config/pacman 
+```
+
 # Configure o tamanho do terminal e o background transparente 
 
 gnome-terminal --preferences
