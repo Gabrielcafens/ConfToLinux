@@ -1,113 +1,78 @@
-**Configurações de ambiente no Linux**
+# Este script automatiza a configuração do ambiente no Linux (Ubuntu) com as seguintes ferramentas:
+# - Zsh e Oh My Zsh
+# - Git e GitHub CLI
+# - GitHub Desktop
+# - Configurações de terminal personalizadas
 
-**Pré-requisitos**
+# Pré-requisitos:
+# - Linux (Ubuntu) instalado :computer:
+# - Gerenciador de pacotes (dnf) instalado :package:
+# - Git instalado :octopus:
 
-* **Linux (Fedora 39) instalado** :computer:
-* **Gerenciador de pacotes (dnf) instalado** :package:
-* **Git instalado** :octopus:
+echo "Iniciando as configurações de ambiente no Linux..."
 
-**Passo a passo**
-
-**Passo 1- Mover Templates :house:**
-
-```
-# Mover a pasta Templates para a pasta home 
-
+# Passo 1 - Mover Templates :house:
+echo "Movendo a pasta Templates para a pasta home..."
 sudo mv ~/Templates/ ~/
 
-# Faça o merge da pasta Templates com a já existente :recycle:
-
+echo "Fazendo merge da pasta Templates..."
 rsync -a ~/Templates/ ~/Templates/
-```
 
-**Passo 2- Instalar Oh My Zsh :rainbow:**
+# Passo 2 - Instalar Oh My Zsh :rainbow:
+echo "Instalando o Zsh..."
+sudo dnf install zsh -y
 
-```
-# Instale o zsh :shell:
-
-sudo dnf install zsh
-
-# Instale o Oh My Zsh
-
+echo "Instalando Oh My Zsh..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
 
-**Passo 3- Mudar tema :file_folder:**
+# Passo 3 - Mudar tema :file_folder:
+echo "Alterando tema do Zsh para agnoster..."
+sed -i 's/ZSH_THEME=".*"/ZSH_THEME="agnoster"/' ~/.zshrc
 
-```
-# Abra o arquivo .zshrc 
+# Passo 4 - Instalar Autosuggestions :rainbow:
+echo "Instalando o plugin zsh-autosuggestions..."
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
-nano ~/.zshrc
+echo "Habilitando o plugin zsh-autosuggestions..."
+sed -i 's/plugins=(/plugins=(zsh-autosuggestions /' ~/.zshrc
 
-# Adicione a seguinte linha ao final do arquivo :heavy_check_mark:
+# Passo 5 - Instalar GitHub CLI :octopus:
+echo "Instalando GitHub CLI (gh)..."
+sudo dnf install gh -y
 
-ZSH_THEME="agnoster"
-```
+# Passo 6 - Instalar GitHub Desktop :ruler:
+echo "Instalando GitHub Desktop..."
 
-**Passo 4- Instalar autosuggestions rainbow:**
-
-
-Instale o plugin de autosuggestions usando o Oh My Zsh 
-
-git clone [https://github.com/zsh-users/zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-
-Habilite o plugin :heavy_check_mark:
-
-nano ~/.zshrc
-
-Adicione a seguinte linha ao final do arquivo :heavy_check_mark:
-
-plugins=(... zsh-autosuggestions ...)
-
-
-**Passo 5- Instalar gh :computer: :octopus:**
-
-```
-# Instale o GH 
-
-sudo dnf install gh
-
-```
-
-**Passo 6- Install GithubDesktop to ubuntu :ruler:**
-
-```
-# UPDATE (2024-01-24)
-
-## Direct copy-paste from official instrubtions
-## Github Desktop for Ubuntu
-## Get the @shiftkey package feed
+# Obtenha a chave GPG e adicione o repositório do GitHub Desktop
 wget -qO - https://apt.packages.shiftkey.dev/gpg.key | gpg --dearmor | sudo tee /usr/share/keyrings/shiftkey-packages.gpg > /dev/null
 sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/shiftkey-packages.gpg] https://apt.packages.shiftkey.dev/ubuntu/ any main" > /etc/apt/sources.list.d/shiftkey-packages.list'
-## Install Github Desktop for Ubuntu
-sudo apt update && sudo apt install github-desktop
 
-```
+# Atualize e instale o GitHub Desktop
+sudo apt update && sudo apt install github-desktop -y
+
 # Mova o arquivo pacman para a pasta .config :folder_open:
-
+echo "Movendo o arquivo pacman para ~/.config..."
 sudo mv ~/pacman ~/.config/
-```
-adicionar ~/.config/pacman na ultima linha
 
-**Passo 7- Preferências de terminal :eye:**
+# Adicione ~/.config/pacman ao .zshrc
+echo "Configurando pacman no Zsh..."
+echo "source ~/.config/pacman" >> ~/.zshrc
 
-```
-**Passo 7- Preferências de terminal :eye:**
+# Passo 7 - Preferências de terminal :eye:
+echo "Configurando preferências do terminal..."
 
+# Conceda permissão de execução ao arquivo pacman
 sudo chmod +x ~/.config/pacman 
-```
 
-# Configure o tamanho do terminal e o background transparente 
+# Configure o tamanho do terminal e o background transparente
+gconftool-2 --set /apps/gnome-terminal/profiles/Default/use_custom_default_size --type bool true
+gconftool-2 --set /apps/gnome-terminal/profiles/Default/default_size_columns --type int 110
+gconftool-2 --set /apps/gnome-terminal/profiles/Default/default_size_rows --type int 30
+gconftool-2 --set /apps/gnome-terminal/profiles/Default/use_custom_background --type bool true
+gconftool-2 --set /apps/gnome-terminal/profiles/Default/background_darkness --type float 0.8
 
-gnome-terminal --preferences
+echo "Configurações aplicadas com sucesso! Reinicie o terminal para ver as mudanças."
 
-# Altere o tamanho do terminal para 110x30 
-
-Tamanho da janela: 110x30
-
-# Ative o background transparente 
-
-Background transparente: Sim
 ```                         ___
 
                           ___
